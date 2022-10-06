@@ -1,0 +1,3 @@
+dapp:
+  image: docker.io/viannaarthur/iot_rollups_dapp:0.6
+  contractAddress: "0x376a07505577440713F27576BB93EFC24CA92C34"
