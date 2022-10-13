@@ -1,0 +1,3 @@
+dapp:
+  image: docker.io/rayangust/datasets-cartesi:0.6
+  contractAddress: "0xCb8B781766478693EFd3BeC251E62431bA4EAfE4"
