@@ -1,0 +1,3 @@
+dapp:
+  image: docker.io/ultrachess/dapp:chessAppNew-devel-server-mumbai
+  contractAddress: "0x1010913d7d8d260CfA266a30c9842656fDdd1048"
