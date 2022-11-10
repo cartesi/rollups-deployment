@@ -1,3 +1,3 @@
 dapp:
-  image: docker.io/manhnguyen3/voting_dapp:0.6.0
-  contractAddress: "0x410723D83459626963079086bDDc2F0E294a5Af2"
+  image: docker.io/manhnguyen3/voting_dapp:0.7.3
+  contractAddress: "0xD2860F0E62B630096Be9c8FbCE1C307B6F839139"
