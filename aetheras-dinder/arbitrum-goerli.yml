@@ -1,0 +1,3 @@
+dapp:
+  image: gcr.io/aetheras-io/dinder-cartesi:v0.2.1
+  contractAddress: "0x5414c4DeAF663578ff2BF5f5079a5e56a545A7a6"
