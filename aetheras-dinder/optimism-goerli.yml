@@ -1,0 +1,8 @@
+dapp:
+  image: gcr.io/aetheras-io/dinder-cartesi:v0.2.1
+  contractAddress: "0x69f54D30aC5b8aDdbE01F991210F55166BF0960d"
+
+validator:
+  dispatcher:
+    transactionManager:
+      chainIsLegacy: "true"
