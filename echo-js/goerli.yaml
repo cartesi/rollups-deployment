@@ -1,3 +1,3 @@
 dapp:
-  image: docker.io/cartesi/dapp:echo-js-0.9.0-server
-  contractAddress: "0x213120950b7304Fd9Be48080D338b43597AD9FaC"
+  image: docker.io/cartesi/dapp:echo-js-0.11.1-server
+  contractAddress: "0x62168101f4D218bab6Ef234794CE32813C7bE6e6"
