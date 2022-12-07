@@ -1,3 +1,3 @@
 dapp:
-  image: docker.io/cartesi/dapp:echo-lua-0.9.0-server
-  contractAddress: "0xD73411583889620E11dB42e635D29F311F522748"
+  image: docker.io/cartesi/dapp:echo-lua-0.11.1-server
+  contractAddress: "0xD1dab121497a7FAA6ef110cCd1E715561fA82d32"
