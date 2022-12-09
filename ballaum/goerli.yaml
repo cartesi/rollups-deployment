@@ -1,7 +1,7 @@
 dapp:
-  image: docker.io/tuler/ballaum-backend:0.2.0
-  contractAddress: "0xF031071e2f7b845952F0C24124059Fe2bD0eC134"
+  image: docker.io/tuler/ballaum-backend:0.3.0
+  contractAddress: "0xb2C831D9803D62220E451C7026ef73A685d9646c"
 validator:
   stateServer:
     stateFold:
-      genesisBlock: "0x7BA81C"
+      genesisBlock: "0x7BAA69"
