@@ -1,3 +1,3 @@
 dapp:
-  image: docker.io/cartesi/dapp:echo-cpp-0.9.0-server
-  contractAddress: "0x542186FAE02795dD4C4ad41f32Fb3341663703c1"
+  image: docker.io/cartesi/dapp:echo-cpp-0.11.1-server
+  contractAddress: "0x5907f2a777cE788676ee378A98971c2F5DC9e5FB"

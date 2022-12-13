@@ -12,7 +12,7 @@ The process consists of the steps below, which are detailed in the following sec
 
 ## Build and publishing of the Cartesi Machine
 
-The first step of a Cartesi Rollups DApp development is to build an application using any supported programming language. This is covered in detail in the [Cartesi Documentation](https://docs.cartesi.io/docs/build-dapps/overview).
+The first step of a Cartesi Rollups DApp development is to build an application using any supported programming language. This is covered in detail in the [Cartesi Documentation](https://docs.cartesi.io/build-dapps/overview).
 
 The artifact produced by the build process of a DApp is a docker image which starts from the [cartesi/server-manager](https://hub.docker.com/repository/docker/cartesi/server-manager) image and adds the application Cartesi Machine.
 

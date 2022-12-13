@@ -1,0 +1,3 @@
+dapp:
+  image: docker.io/fabiooshiro/cartesi-dapp:solana-adapter-devel-server
+  contractAddress: "0xA17BE28F84C89474831261854686a6357B7B9c1E"

@@ -1,0 +1,3 @@
+dapp:
+  image: docker.io/marcussouza90/marcus-repo:biometrics
+  contractAddress: "0x208976FA22017Ab98181d2D2f8A23cc7C9d04ec1"
