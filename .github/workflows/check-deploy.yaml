@@ -48,16 +48,32 @@ jobs:
           _network=$(basename ${{ matrix.dapp }})
           echo "::set-output name=network::${_network%.y*ml}"
 
+      - name: Get RPC_URL
+        id: rpc_provider
+        run: |
+          NETWORK="${{ steps.dapp_descriptor.outputs.network }}"
+          case "$NETWORK" in
+          chiado)
+            RPC_URL="https://rpc.chiadochain.net"
+          ;;
+          goerli|polygon-mumbai|optimism-goerli|arbitrum-goerli)
+            RPC_URL="https://${{ steps.dapp_descriptor.outputs.network }}.infura.io/v3/501b4a58738b45919b9c27d709fd624d"
+          ;;
+          *)
+          printg "%s not supported\n" $NETWORK
+          exit 1
+          esac
+
+          echo "::set-output name=url::$RPC_URL"
+
       - name: Check if Cartesi(0x18930e8a66a1DbE21D00581216789AAB7460Afd0) is the validator
         run: |
-          RPC_URL="https://${{ steps.dapp_descriptor.outputs.network }}.infura.io/v3/501b4a58738b45919b9c27d709fd624d"
-          cast call --chain ${{ steps.dapp_descriptor.outputs.network }} --rpc-url $RPC_URL ${{ steps.dapp_descriptor.outputs.dapp_contract_address  }} 'getValidatorIndex(address)' 0x18930e8a66a1DbE21D00581216789AAB7460Afd0
+          cast call --chain ${{ steps.dapp_descriptor.outputs.network }} --rpc-url ${{ steps.rpc_provider.outputs.url }} ${{ steps.dapp_descriptor.outputs.dapp_contract_address  }} 'getValidatorIndex(address)' 0x18930e8a66a1DbE21D00581216789AAB7460Afd0
 
       - name: Get deployed DApp Machine Hash
         id: contract_hash
         run: |
-          RPC_URL="https://${{ steps.dapp_descriptor.outputs.network }}.infura.io/v3/501b4a58738b45919b9c27d709fd624d"
-          _contract_machine_hash="$(cast call --chain ${{ steps.dapp_descriptor.outputs.network }} --rpc-url $RPC_URL ${{ steps.dapp_descriptor.outputs.dapp_contract_address  }} 'getTemplateHash()')"
+          _contract_machine_hash="$(cast call --chain ${{ steps.dapp_descriptor.outputs.network }} --rpc-url ${{ steps.rpc_provider.outputs.url }} ${{ steps.dapp_descriptor.outputs.dapp_contract_address  }} 'getTemplateHash()')"
           echo "::set-output name=contract_machine_hash::${_contract_machine_hash:2}"
 
       - name: Get DApp Container Machine Hash
