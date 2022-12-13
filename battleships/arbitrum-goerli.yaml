@@ -1,0 +1,3 @@
+dapp:
+  image: docker.io/productiv3/cartesian-battleships:battleships-0.6.0-machine
+  contractAddress: "0x4F660562c4550d962867C397A64116358f5FA27A"
